@@ -57,8 +57,8 @@
 We aim to provide awareness regarding this virus and threat caused by it among people.
 COVID-19 symptoms can be very mild to severe. Some people have no symptoms. The most common signs and symptoms are fever, cough, tiredness, and loss of taste or smell.
 <br><br> Total number of cases -
-<br>Cases: 674,380,872
-<br>Deaths: 6,879,407
+<br>Cases: <span id = "totalcount"></span>
+<br>Deaths: <span id = "deathcount"></span>
 
 <span id="readDots"
               >...</span
@@ -124,6 +124,23 @@ COVID-19 symptoms can be very mild to severe. Some people have no symptoms. The 
     <!-- End Footer -->
 
     <!-- Javascript files-->
+    <script>
+      const totalcount = document.getElementById('totalcount');
+
+const deathcount = document.getElementById('deathcount');
+
+const APIURL = "https://api.covidtracking.com/v1/us/current.json";
+
+window.addEventListener("load",getData());
+
+async function getData() {
+  const resp = await fetch(APIURL);
+  const respData = await resp.json();
+  totalcount.innerHTML = `${respData?.[0]?.positive}`;
+  deathcount.innerHTML = `${respData?.[0]?.death}`;
+}
+
+    </script>
     <script src="./js/script.js"></script>
   </body>
 </html>
