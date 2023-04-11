@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <title>Covid</title>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header>
+      <div class="main-container">
+        <nav class="navbar">
+          <a href="index.html" class="nav-logo"
+            ><img src="./images/logo.png" alt="logo" />Covid</a
+          >
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link active">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="index.html#action" class="nav-link">Take Action</a>
+            </li>
+            <li class="nav-item">
+              <a href="vaccine.html" class="nav-link">Vaccine</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item">
+              <button id="modeIcon" class="nav-link"></button>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header -->
+
+    <!-- About Container -->
+    <div class="main-container">
+      <div class="about-conatiner">
+        <div class="about-left-side">
+          <h2>About Corona Virus</h2>
+          <p>
+            Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus. 
+We aim to provide awareness regarding this virus and threat caused by it among people.
+COVID-19 symptoms can be very mild to severe. Some people have no symptoms. The most common signs and symptoms are fever, cough, tiredness, and loss of taste or smell.
+<br><br> Total number of cases -
+<br>Cases: 674,380,872
+<br>Deaths: 6,879,407
+
+<span id="readDots"
+              >...</span
+            ><span id="readMore"
+              ><br> <br>
+              There are many steps you can take to reduce your risk of infection from the COVID-19 virus and reduce the risk of spreading it to others.
+              We are here for the awareness of Corona Virus. Morever, we run campaigns that provides food and shelter, beds, oxygen, remdesivir injections, nebulizer for infected patients.</span
+            >
+          </p>
+          <button class="banner-btn" onclick="readFunction()" id="ReadButton">Read more</buttton>
+        </div>
+        <div class="about-right-side">
+          <img src="./images/about.png" alt="virus" />
+        </div>
+      </div>
+    </div>
+    <!-- End About Container -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="main-container">
+        <div class="footer-wrapper">
+          <div class="menu-section">
+            <h4>Resources</h4>
+            <ul class="footer-menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="index.html#action">Take Action</a></li>
+              <li><a href="vaccine.html">Vaccine</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="about-section">
+            <h4>About</h4>
+            <p>
+              We are here for the awareness of Corona Virus. Moreover, we run campaigns that provides food and shelter, beds, oxygen, remdesivir injections, nebulizer for infected patients.
+            </p>
+          </div>
+          <div class="contact-section">
+            <h4>Contact us</h4>
+            <ul class="footer-contact">
+              <li>
+                <img src="./images/location_icon.png" alt="locationIcon" />
+                <a href = contact.html>Douglas College</a>
+              </li>
+              <li>
+                <img src="./images/phone_icon.png" alt="phoneIcon" />
+                <a href="tel:6045374585">(604) 537 4585</a>
+              </li>
+              <li>
+                <img src="./images/mail_icon.png" alt="mailIcon" />
+                <a href="mailto:yash@covid.org">cov@covid.org</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <div class="stroke"></div>
+          <p>© 2023 All Rights Reserved. Design by Yash Maniar</p>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Javascript files-->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
