@@ -125,6 +125,8 @@ header {
   max-width: 50px;
   display: flex;
   align-items: center;
+  font-family: serif;
+  font-weight: bold;
 }
 
 #modeIcon {
@@ -156,6 +158,7 @@ header {
 .slideshow-container {
   position: relative;
   margin: auto;
+  width: 100%;
 }
 
 /* Make the images invisible by default */
@@ -259,14 +262,26 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.myform
-{
-  color: var(--secondary-color); 
+
+.myform {
+  color: var(--secondary-color);
 }
+
+.myform ul li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.myform ul li label {
+  min-width: 100px;
+  font-size: 1.3rem;
+}
+
 .banners h2 {
   font-size: 6.5rem;
   margin-bottom: 25px;
-  color:white; /* var(--secondary-color); */
+  color: white; /* var(--secondary-color); */
 }
 
 .banner-btn {
@@ -340,13 +355,16 @@ header {
   font-size: 1.5rem;
 }
 
-.about-right-side,
-.what-is-left-side {
+.about-right-side {
   width: 40%;
 }
 
+.what-is-left-side {
+  width: 25%;
+}
+
 .what-is-right-side {
-  padding-left: 25px;
+  width: 70%;
 }
 
 /* Protect and Cases*/
@@ -368,6 +386,7 @@ header {
   font-size: 1.5rem;
   margin-bottom: 30px;
   color: var(--primary-font);
+  padding: 0 30px;
 }
 
 .way-container {
@@ -400,6 +419,7 @@ header {
 
 .each-way img {
   max-width: 75px;
+  max-height: 75px;
   margin-bottom: 20px;
 }
 
@@ -462,6 +482,18 @@ header {
   width: 100px;
   filter: drop-shadow(2px 4px 6px #000);
   border-radius: 0px;
+  animation: rotation 6s infinite linear;
+}
+
+/* Animation */
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 /* Footer */
@@ -472,6 +504,7 @@ footer {
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 50px 0px;
 }
 
@@ -561,8 +594,6 @@ footer {
   margin-top: 25px;
 }
 
-
-
 .overlay {
   position: absolute;
   top: 0;
@@ -574,19 +605,24 @@ footer {
   visibility: hidden;
   opacity: 0;
 }
+
 .overlay:target {
   visibility: visible;
   opacity: 1;
 }
+
 .popup {
   margin: 70px auto;
   padding: 20px;
   background: #fff;
   border-radius: 5px;
-  font-size: 15;
-  width: 45%;
+  font-size: 1.3rem;
+  width: 100%;
+  max-width: 500px;
   position: relative;
   transition: all 5s ease-in-out;
+  z-index: 99;
+  box-shadow: var(--shadow);
 }
 
 .popup h2 {
@@ -594,6 +630,7 @@ footer {
   color: #333;
   font-family: Tahoma, Arial, sans-serif;
 }
+
 .popup .close {
   position: absolute;
   top: 10px;
@@ -604,11 +641,16 @@ footer {
   text-decoration: none;
   color: #333;
 }
+
 .popup .close:hover {
-  color: orange;
+  color: var(--button-background-color);
 }
+
 .popup .content {
-  
   max-height: 30%;
   overflow: auto;
+}
+
+.form-wrapper {
+  margin-top: 25px;
 }

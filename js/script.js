@@ -54,7 +54,6 @@ function closeMenu() {
 // Carousel
 window.addEventListener("load", function () {
   SlideShow(slidePosition);
-  console.log("lol");
 });
 
 var slidePosition = 1;
